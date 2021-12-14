@@ -6,7 +6,7 @@ class PromoItem {
   String _description;
   String _imgFull;
   String _imgThumb;
-  String _maplink;
+  // String _maplink;
   String _place;
   String _shop_description;
 
@@ -18,7 +18,7 @@ class PromoItem {
     String description,
     String imgFull,
     String imgThumb,
-    String mapLink,
+    // String mapLink,
     String place,
     String shop_description
   }) {
@@ -29,7 +29,7 @@ class PromoItem {
     this._description = description;
     this._imgFull = imgFull;
     this._imgThumb = imgThumb;
-    this._maplink = mapLink;
+    // this._maplink = mapLink;
     this._shop_description = shop_description;
   }
 
@@ -41,7 +41,7 @@ class PromoItem {
     _description = json['description'];
     _imgFull = json['img_full'];
     _imgThumb = json['img_thumb'];
-    _maplink = json['maplink'];
+    // _maplink = json['maplink'];
     _place = json['place'];
     _shop_description = json['shop_description'];
 
@@ -56,7 +56,7 @@ class PromoItem {
     data['name'] = this._name;
     data['description'] = this._description;
     data['img_full'] = this._imgFull;
-    data['maplink'] = this._maplink;
+    // data['maplink'] = this._maplink;
     data['place'] = this._place;
     data['shop_description'] = this._shop_description;
 
@@ -77,7 +77,7 @@ class PromoItem {
 
   String get imgThumb => (_imgThumb == null ? "null" : _imgThumb);
 
-  String get maplink => (_maplink == null ? "null": _maplink);
+  // String get maplink => (_maplink == null ? "null": _maplink);
 
   String get place => (_place == null ? "null": _place);
 

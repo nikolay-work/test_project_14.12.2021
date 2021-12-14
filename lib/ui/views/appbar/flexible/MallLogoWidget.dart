@@ -6,7 +6,7 @@ class MallLogoWidget extends StatelessWidget {
     return FittedBox(
         child: Stack(children: [
           Image(
-            image: AssetImage('mall_background.png'),
+            image: AssetImage('assets/images/mall_background.png'),
             fit: BoxFit.cover,
           ),
           /*  Container(

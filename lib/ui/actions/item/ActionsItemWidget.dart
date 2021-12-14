@@ -28,12 +28,13 @@ class _ActionsItemWidgetState extends NewBasePageState<ActionsItemWidget> {
   @override
   Widget build(BuildContext context) {
     if (actionId == -1) {
-      final ActionsItemArguments args =
+      final Map<String, int> args =
           ModalRoute.of(context).settings.arguments;
-      actionId = args.actionId;
+      actionId = args['actionId'];
     }
     return BlocProvider<ActionsItemQueryBloc>(
-        bloc: bloc, child: getBaseQueryStream(bloc.shopItemContentStream));
+        bloc: bloc,
+        child: getBaseQueryStream(bloc.shopItemContentStream));
   }
 
   @override
@@ -58,7 +59,7 @@ class _ActionsItemWidgetState extends NewBasePageState<ActionsItemWidget> {
             _shopInfo(actionInfo),
             _shopDescription(actionInfo.shop_description),
             SizedBox(height: 20),
-            _actionDescriptionFull(actionInfo.description)
+            _actionDescriptionFull(actionInfo.description),
           ],
         ));
   }

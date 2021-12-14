@@ -6,7 +6,7 @@ class Tools {
   static String getImagePath(String shortPath) {
     //TODO выдавать какую-нибудь картинку при пустом адресе.
     if ((shortPath == null) || (shortPath == "null")) {
-      shortPath = "uploads/mall.jpg";
+      shortPath = "uploads/promo/img/3/1.jpg";
     }
     return MallApiProvider.baseImageUrl + shortPath;
   }

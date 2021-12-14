@@ -57,20 +57,22 @@ abstract class NewBasePageState<T extends StatefulWidget> extends State<T> {
                   bottomLeft: Radius.circular(15),
                   bottomRight: Radius.circular(15)),
             ),
-            child: CachedNetworkImage(
-              imageUrl: Tools.getImagePath(appBarImageLink),
-              placeholder: (context, url) =>
-                  Center(child: CircularProgressIndicator()),
-              errorWidget: (context, url, error) =>
-                  Image(image: AssetImage('mall_background.png')),
-              imageBuilder: (context, imageProvider) => Container(
-                  decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: imageProvider,
-                  fit: BoxFit.cover,
-                ),
-              )),
-            )));
+            child: Image(image: AssetImage('assets/images/mall_background.png')),
+            // CachedNetworkImage(
+            //   imageUrl: Tools.getImagePath(appBarImageLink),
+            //   placeholder: (context, url) =>
+            //       Center(child: CircularProgressIndicator()),
+            //   errorWidget: (context, url, error) =>
+            //       Image(image: AssetImage('assets/images/mall_background.png')),
+            //   imageBuilder: (context, imageProvider) => Container(
+            //       decoration: BoxDecoration(
+            //     image: DecorationImage(
+            //       image: imageProvider,
+            //       fit: BoxFit.cover,
+            //     ),
+            //   )),
+            // ),
+        ));
     return FlexAppBar(title, networkBackground, body, isCollapsed(),
         actions: actions, brightness: brightness);
   }
